@@ -13,7 +13,7 @@
   <body>
     <header>
       <img id="logo"src="img/logo.jpg">
-      <div id="logo"> LOGO </div>
+      <div id="logo"> Scholare </div>
       <nav>
         <ul>
           <li><a href="#" class="active">Home</a></li>
