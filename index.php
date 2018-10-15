@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Pestalozzi</title>
+    <title>Scholare</title>
   </head>
   <body>
     <header>
@@ -16,10 +16,25 @@
       <div id="logo"> Scholare </div>
       <nav>
         <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Cadastros</a></li>
-          <li><a href="#">Notas</a></li>
-          <li><a href="#">Presença</a></li>
+          <li><a href="#">Home</a></li>
+          <li class="submenu"><a href="#">Cadastros</a>
+            <ul>
+              <li><a href="#">Aluno</a></li>
+              <li><a href="#">Professor</a></li>
+            </ul>
+          </li>
+          <li class="submenu"><a href="#">Notas</a>
+            <ul>
+              <li><a href="#">Cadastrar Notas</a></li>
+              <li><a href="#">Exibir Notas</a></li>
+            </ul>
+          </li>
+          <li class="submenu"><a href="#">Presença</a>
+            <ul>
+              <li><a href="#">Cadastrar Presença</a></li>
+              <li><a href="#">Exibir Presença</a></li>
+            </ul>
+          </li>
           <li><a href="#">Sobre</a></li>
         </ul>
       </nav>
