@@ -1,60 +1,85 @@
-/*CSS DE TODAS AS PÁGINAS*/
 body{
   margin: 0;
-  background-color: gainsboro;
-}
-nav{
-  float: right;
-  margin-right: 40%;
-}
-nav ul{
-  margin: 0;
   padding: 0;
-  list-style: none;
-}
-nav li{
-  display: inline-block;
-  margin-left: 50px;
-  padding-top: 5%;
-  position: relative;
-}
-nav a{
-  color:white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-nav a:hover{
-  color: lightgray;
-}
-nav a::before{
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: white;
-  position: absolute;
-  top:0;
-  width: 0%;
-  transition: all ease-in-out 200ms;
-}
-nav a:hover::before{
-  width: 100%;
+  font-family: sans-serif;
+  background: url(/img/fundo.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 header{
-  background-color: darkblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: #262626;
+  width: 100%;
+  box-sizing: border-box;
 }
-header::after{
-  content: '';
-  display: table;
-  clear:both;
-}
-
-.container{
-  width: 80%;
-  margin: 0 auto;
-}
-
-.logo{
+header #logo{
+  color:#fff;
+  height: 50px;
+  width: 40px;
+  line-height: 50px;
+  font-size: 24px;
   float: left;
-  padding: 10px 0;
+  font-weight: bold;
+}
+header nav{
+  float: right;
+}
+header nav ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header nav ul li{
+  list-style: none;
+}
+header nav ul li a{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+  color: #fff;
+  background: #2196f3;
+}
+.menu-toggle{
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  cursor: pointer;
+  display: none;
+}
+@media(max-width: 991px){
+  header{
+    padding:  0 20px;
+  }
+  .menu-toggle{
+    display: block;
+  }
+  header nav{
+    position: absolute;
+    width: 100%;
+    height:  calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  header nav.active{
+    left: 0;
+  }
+  header nav ul{
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }
